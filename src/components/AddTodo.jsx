@@ -34,7 +34,7 @@ function AddTodo() {
 
   return (
     <form className="bg-red-200 flex gap-2 p-3 rounded-2xl" onSubmit={(e) => addTodoHandler(e)}>
-        <input className="bg-white rounded-xl p-1" placeholder="Add Task " onChange={(e)=>dispatch(updateInput({Input:e.target.value,id:id == null ? null:id}))} value={Input} type="text" />
+        <input id="TodoForm" className="bg-white rounded-xl p-1" placeholder="Add Task " onChange={(e)=>dispatch(updateInput({Input:e.target.value,id:id == null ? null:id}))} value={Input} type="text" />
         <button className="bg-blue-300 p-2 pr-4 pl-4 text-white rounded-2xl hover:cursor-pointer
         hover:bg-blue-400
         " type="submit">{value}</button>
