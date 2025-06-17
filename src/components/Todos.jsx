@@ -17,7 +17,7 @@ function Todos() {
     },[Todos])
 
 
-    if(Todos.length === 0) return <ul className="bg-red-300 p-3 rounded-xl flex flex-col gap-2"> There is Not Task</ul>
+    if(Todos.length === 0) return <ul className="h-70 w-60 justify-center items-center text-white text-2xl font-bold bg-red-300 p-3 rounded-xl flex flex-col gap-2">No Tasks</ul>
 
   return (
     <>
