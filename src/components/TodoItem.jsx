@@ -13,7 +13,7 @@ function TodoItem({handleEdit ,todo}) {
         <button disabled ={todo.completed} onClick={() => handleEdit(todo.id,todo.text)} className="bg-blue-300 p-1 pr-3 pl-3 rounded-2xl text-white hover:bg-blue-400 hover:cursor-pointer">
           edit
         </button>
-        <button  onClick={() => dispatch(removeTodo(todo.id))} className=" bg-red-300 p-1 pr-3 pl-3 rounded-2xl text-white hover:bg-red-400 hover:cursor-pointer">
+        <button disabled= {!todo.completed}  onClick={() => dispatch(removeTodo(todo.id))} className=" bg-red-300 p-1 pr-3 pl-3 rounded-2xl text-white hover:bg-red-400 hover:cursor-pointer">
           del
         </button>
       </div>
