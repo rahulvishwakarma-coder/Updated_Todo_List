@@ -4,7 +4,6 @@ import { completed } from "../features/todo/todoSlice";
 
 function Checkbox({todo}) {
     const Dispatch = useDispatch();
-    const TextClass = `cursor-pointer text-slate-600 text-sm ${todo.completed ?"line-through":""}`
 
   return (
     <div className="inline-flex items-center">
@@ -37,7 +36,7 @@ function Checkbox({todo}) {
           </svg>
         </span>
       </label>
-      <label className={TextClass} htmlFor={todo.id}>
+      <label className={`cursor-pointer text-slate-600 text-sm ${todo.completed ? "line-through":""}`} htmlFor={todo.id}>
         {todo.text}
       </label>
     </div>
